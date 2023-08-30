@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const LoginPage = () => {
+function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Use the useNavigate hook to programmatically navigate
+  const navigate = useNavigate(); // Import the useNavigate hook from react-router-dom
 
   const handleLogin = () => {
     // Replace these values with actual username and password for validation
@@ -13,7 +13,8 @@ const LoginPage = () => {
     const validPassword = 'yourPassword';
 
     if (username === validUsername && password === validPassword) {
-      navigate('/home'); // Redirect to the home page after successful login
+      // Call the useNavigate hook to navigate to the home page
+      navigate('/home');
     } else {
       setError('Invalid username or password');
     }
@@ -38,6 +39,6 @@ const LoginPage = () => {
       <button onClick={handleLogin}>Login</button>
     </div>
   );
-};
+}
 
 export default LoginPage;
