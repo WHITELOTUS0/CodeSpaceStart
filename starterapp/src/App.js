@@ -5,12 +5,13 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <Router>
+    <div>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<LoginPage />} />
+        <Route path="/home" element={<Home/>} />
+        {/* Other routes */}
       </Routes>
-    </Router>
+    </div>
   );
 }
 
