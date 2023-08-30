@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [error, setError] = useState('');
+  const navigate = useNavigate(); // Use the useNavigate hook to programmatically navigate
 
   const handleLogin = () => {
-    // Add your authentication logic here (e.g., check username and password)
-    // For this example, we'll just check if both fields are filled
-    if (username && password) {
-      setLoggedIn(true);
+    // Replace these values with actual username and password for validation
+    const validUsername = 'yourUsername';
+    const validPassword = 'yourPassword';
+
+    if (username === validUsername && password === validPassword) {
+      navigate('/home'); // Redirect to the home page after successful login
+    } else {
+      setError('Invalid username or password');
     }
   };
-
-  if (loggedIn) {
-    // Redirect to the home page after successful login
-    return <Redirect to="/home" />;
-  }
 
   return (
     <div>
       <h2>Login</h2>
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <input
         type="text"
         placeholder="Username"
