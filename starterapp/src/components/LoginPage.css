@@ -1,4 +1,17 @@
 /* LoginPage.css */
+/* LoginPage.css */
+
+/* Add a background image to the body */
+body {
+  background-image: url('../../public/Mapeera1.jpg'); /* Replace with the actual path to your image */
+  background-size: cover; /* Cover the entire viewport */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Fixed background */
+  background-position: center center; /* Center the image horizontally and vertically */
+  margin: 0; /* Remove default margin to ensure full coverage */
+  padding: 0; /* Remove default padding */
+}
+
 
 /* Container styles */
 div {
