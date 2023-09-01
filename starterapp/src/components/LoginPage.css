@@ -7,12 +7,12 @@ div {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #3498db; /* Blue background */
+    background-color: #fff; /* Blue background */
   }
   
   /* Form styles */
   h2 {
-    color: #fff; /* White text */
+    color: #3498db; /* White text */
     margin-bottom: 20px;
   }
   
