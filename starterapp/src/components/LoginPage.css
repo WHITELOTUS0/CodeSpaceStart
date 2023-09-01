@@ -38,6 +38,10 @@ h2 {
   color: #3498db; /* Blue text */
   margin-bottom: 20px;
 }
+h1{
+  color: #e74c3c; /* Red text */
+  margin-top: 10px;
+}
 
 input {
   width: 100%; /* Make the input fields width 100% of the card */
