@@ -22,7 +22,8 @@ function LoginPage() {
   };
 
   return (
-    <div>
+    <div className="card"> {/* Apply the "card" class */}
+    <h1>Cente-Contacts</h1>
       <h2>Login</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <input
@@ -40,6 +41,7 @@ function LoginPage() {
       <button onClick={handleLogin}>Login</button>
     </div>
   );
+  
 }
 
 export default LoginPage;
