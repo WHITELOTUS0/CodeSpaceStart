@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 app.get('/', (req, res)=>{
-    res.send('Hello, this is your Express server!');
+    res.send('Hello, this is your Express server running!');
 });
 
 app.get('/users', async (req,res)=>{
