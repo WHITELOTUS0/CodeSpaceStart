@@ -15,3 +15,16 @@ const userSchema = new mongoose.Schema({
     username: String,
     password: String
 });
+
+const User = mongoose.model('User', userSchema);
+
+app.get('/', (req, res)=>{
+    res.send('Hello, this is your Express server!');
+});
+
+app.get('/users', async (req,res)=>{
+    try{
+        const users = await User.find();
+        res.json(users);
+    }
+})
